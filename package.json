@@ -1,11 +1,13 @@
 {
-  "name": "webpack-library-starter",
-  "version": "1.0.2",
-  "description": "Produce universal library with webpack and es6",
-  "main": "lib/library.js",
+  "name": "wavinglyjs",
+  "version": "1.0.0",
+  "description": "Add testimonial widgets to your website",
+  "main": "lib/wavinglyjs.js",
   "scripts": {
-    "build": "webpack --env dev && webpack --env build && npm run test",
+    "build": "webpack --env dev && webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
+    "server": "http-server",
+    "start": "yarn server & yarn dev",
     "test": "mocha --require babel-core/register --colors ./test/*.spec.js",
     "test:watch": "mocha --require babel-core/register --colors -w ./test/*.spec.js"
   },
@@ -41,5 +43,10 @@
     "mocha": "^4.0.1",
     "webpack": "^3.10.0",
     "yargs": "^10.0.3"
+  },
+  "dependencies": {
+    "domready": "^1.0.8",
+    "iframe-resizer": "^3.5.16",
+    "lodash": "^4.17.4"
   }
 }
